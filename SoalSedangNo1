@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class SoalSedang1 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Masukkan bilangan bulat positif: ");
+        int n = scanner.nextInt();
+        
+        // Memeriksa apakah input valid
+        if ( n < 0) {
+            System.out.println("Bilangan harus positif.");
+        } else {
+            int hasil = 1; 
+            for (int i = 1; i <= n ; i++) {
+                System.out.print(i +"*");
+                hasil *= i; // Mengalikan setiap bilangan dari 1 hingga n
+            }
+            System.out.println(" Faktorial dari " + n + " adalah: " + hasil);
+        }
+    }
+}
